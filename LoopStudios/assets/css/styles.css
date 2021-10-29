@@ -516,3 +516,8 @@
     justify-content: center;
   }
 }
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  #wrapper #leader_in_interactive_vr .container .vr_leader {
+    right: 285px;
+  }
+}
