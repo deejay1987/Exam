@@ -383,10 +383,10 @@
     padding: 0px;
   }
   #wrapper #splash_section {
-    padding: 0px;
     background-image: url(../images/mobile/image-hero.jpg);
     bottom: 600px;
     left: 35px;
+    padding: 0px;
   }
   #wrapper #splash_section .container {
     width: 300px;
