@@ -4,46 +4,49 @@
 }
 #wrapper{
     header{
-        background-image: url(../images/desktop/image-hero.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 800px;
-        padding: 0px 150px;
-        position: relative;
-        nav{
+        padding: 80px 150px 0px 150px;
+        position: fixed;       
+        width: 100%;
+        .container{
             padding: 0px;
-            .container-fluid{
-                padding: 75px 0px;
-                ul{
-                    margin: 0px;
+            nav{
+                .container-fluid{
                     padding: 0px;
-                    li{
-                        list-style: none;
-                        a{
-                            color: white;
-                            font-family: 'Alata', sans-serif;
+                    ul{
+                        margin: 0px;
+                        padding: 0px;
+                        li{
+                            list-style: none;
+                            a{
+                                color: white;
+                                font-family: 'Alata', sans-serif;
+                            }
                         }
                     }
                 }
             }
         }
-        #splash_section{
-            bottom: 190px;
-            left: 150px;
-            position: absolute;
-            .container{
+    }
+    #splash_section{
+        background-image: url(../images/desktop/image-hero.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 800px;
+        padding: 0px 150px;
+        vertical-align: top;
+        .container{
+            padding: 300px 0px 0px 0px;
+            h1{
                 border: 2px solid white;
+                color: white;
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 70px;
+                font-weight: 400;
+                letter-spacing: 1px;
                 margin: 0px;
-                padding: 0px;
-                width: 580px;
-                h1{
-                    color: white;
-                    font-family: 'Josefin Sans', sans-serif;
-                    font-size: 70px;
-                    margin: auto;
-                    padding: 40px;
-                    text-transform: uppercase;
-                }
+                padding: 45px;
+                text-transform: uppercase;
+                width: 660px;
             }
         }
     }
@@ -166,37 +169,40 @@
     }
     footer{
         background-color: black;
-        display: flex;
-        justify-content: space-between;
         padding: 80px 150px;
-        #left_nav_section{
-            nav{
-                margin-top: 25px;
-                ul{
-                    display: flex;
-                    justify-content: space-between;
-                    padding: 0px;
-                    width: 500px;
-                    li{
-                        list-style: none;
-                        a{
-                            color: white;
-                            text-decoration: none;
+        .container{
+            display: flex;
+            justify-content: space-between;
+            padding: 0px;
+            #left_nav_section{
+                nav{
+                    margin-top: 25px;
+                    ul{
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0px;
+                        width: 500px;
+                        li{
+                            list-style: none;
+                            a{
+                                color: white;
+                                text-decoration: none;
+                            }
                         }
                     }
                 }
             }
-        }
-        #right_nav_section{
-            #social_media{
-                display: flex;
-                gap: 25px;
-                justify-content: flex-end;
-            }
-            p{
-                color: grey;
-                font-family: 'Alata', sans-serif;
-                margin-top: 25px;
+            #right_nav_section{
+                #social_media{
+                    display: flex;
+                    gap: 25px;
+                    justify-content: flex-end;
+                }
+                p{
+                    color: grey;
+                    font-family: 'Alata', sans-serif;
+                    margin-top: 25px;
+                }
             }
         }
     }
@@ -204,28 +210,31 @@
 @media screen and (max-width: 375px){
     #wrapper{
         header{
-            background-image: url(../images/mobile/image-hero.jpg);
-            padding: 35px;
-            nav{
-                .container-fluid{
-                    margin-top: 30px;
-                    padding: 0px;
-                }
-            }
-            #splash_section{
-                bottom: 330px;
-                left: 35px;
-                .container{
-                    width: 300px;
-                    h1{
-                        font-size: 40px;
-                        padding: 10px;
-                        width: 100%;
+            padding: 0px;
+            .container{
+                padding: 40px 35px 0px 35px;
+                nav{
+                    .container-fluid{
+                        margin-top: 30px;
+                        padding: 0px;
                     }
                 }
             }
         }
-        
+        #splash_section{
+            background-image: url(../images/mobile/image-hero.jpg);
+            bottom: 600px;
+            left: 35px;
+            padding: 0px;
+            .container{
+                width: 300px;
+                h1{
+                    font-size: 40px;
+                    padding: 10px;
+                    width: 100%;
+                }
+            }
+        }
         #leader_in_interactive_vr{
             display: flex;
             padding: 35px;
@@ -325,30 +334,33 @@
             }
         }
         footer{
-            flex-direction: column;
             padding: 50px;
-            #left_nav_section{
-                margin: auto;
-                nav{
-                    flex-direction: column;
-                    text-align: center;
-                    width: 100%;
-                    ul{
+            .container{
+                display: flex;
+                flex-direction: column;
+                #left_nav_section{
+                    margin: auto;
+                    nav{
                         flex-direction: column;
-                        justify-content: center;
+                        text-align: center;
                         width: 100%;
-                        li{
-                            padding: 10px 0px;
+                        ul{
+                            flex-direction: column;
+                            justify-content: center;
+                            width: 100%;
+                            li{
+                                padding: 10px 0px;
+                            }
                         }
                     }
                 }
-            }
-            #right_nav_section{
-                margin-top: 50px;
-                text-align: center;
-                width: 100%;
-                #social_media{
-                    justify-content: center;
+                #right_nav_section{
+                    margin-top: 50px;
+                    text-align: center;
+                    width: 100%;
+                    #social_media{
+                        justify-content: center;
+                    }
                 }
             }
         }
@@ -357,24 +369,28 @@
 @media screen and (min-width: 376px) and (max-width: 600px){
     #wrapper{
         header{
-            background-image: url(../images/mobile/image-hero.jpg);
-            padding: 35px;
-            nav{
-                .container-fluid{
-                    margin-top: 30px;
-                    padding: 0px;
+            padding: 0px;
+            .container{
+                padding: 40px 35px 0px 35px;
+                nav{
+                    .container-fluid{
+                        margin-top: 30px;
+                        padding: 0px;
+                    }
                 }
             }
-            #splash_section{
-                bottom: 330px;
-                left: 35px;
-                .container{
-                    width: 300px;
-                    h1{
-                        font-size: 40px;
-                        padding: 10px;
-                        width: 100%;
-                    }
+        }
+        #splash_section{
+            padding: 0px;
+            background-image: url(../images/mobile/image-hero.jpg);
+            bottom: 600px;
+            left: 35px;
+            .container{
+                width: 300px;
+                h1{
+                    font-size: 40px;
+                    padding: 10px;
+                    width: 100%;
                 }
             }
         }
@@ -475,36 +491,39 @@
             }
         }
         footer{
-            flex-direction: column;
             padding: 50px;
-            #left_nav_section{
-                margin: auto;
-                nav{
-                    flex-direction: column;
-                    text-align: center;
-                    width: 100%;
-                    ul{
+            .container{
+                display: flex;
+                flex-direction: column;
+                #left_nav_section{
+                    margin: auto;
+                    nav{
                         flex-direction: column;
-                        justify-content: center;
+                        text-align: center;
                         width: 100%;
-                        li{
-                            padding: 10px 0px;
+                        ul{
+                            flex-direction: column;
+                            justify-content: center;
+                            width: 100%;
+                            li{
+                                padding: 10px 0px;
+                            }
                         }
                     }
                 }
-            }
-            #right_nav_section{
-                margin-top: 50px;
-                text-align: center;
-                width: 100%;
-                #social_media{
-                    justify-content: center;
+                #right_nav_section{
+                    margin-top: 50px;
+                    text-align: center;
+                    width: 100%;
+                    #social_media{
+                        justify-content: center;
+                    }
                 }
             }
         }
     }
 }
-@media screen and (min-width: 1200px) and (max-width: 1400px){
+@media screen and (min-width: 1200px) and (max-width: 1439px){
     #wrapper{
         #leader_in_interactive_vr{
             .container{

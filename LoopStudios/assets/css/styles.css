@@ -3,48 +3,49 @@
   padding: 0px;
 }
 #wrapper header {
+  padding: 80px 150px 0px 150px;
+  position: fixed;
+  width: 100%;
+}
+#wrapper header .container {
+  padding: 0px;
+}
+#wrapper header .container nav .container-fluid {
+  padding: 0px;
+}
+#wrapper header .container nav .container-fluid ul {
+  margin: 0px;
+  padding: 0px;
+}
+#wrapper header .container nav .container-fluid ul li {
+  list-style: none;
+}
+#wrapper header .container nav .container-fluid ul li a {
+  color: white;
+  font-family: 'Alata', sans-serif;
+}
+#wrapper #splash_section {
   background-image: url(../images/desktop/image-hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 800px;
   padding: 0px 150px;
-  position: relative;
+  vertical-align: top;
 }
-#wrapper header nav {
-  padding: 0px;
+#wrapper #splash_section .container {
+  padding: 300px 0px 0px 0px;
 }
-#wrapper header nav .container-fluid {
-  padding: 75px 0px;
-}
-#wrapper header nav .container-fluid ul {
-  margin: 0px;
-  padding: 0px;
-}
-#wrapper header nav .container-fluid ul li {
-  list-style: none;
-}
-#wrapper header nav .container-fluid ul li a {
-  color: white;
-  font-family: 'Alata', sans-serif;
-}
-#wrapper header #splash_section {
-  bottom: 190px;
-  left: 150px;
-  position: absolute;
-}
-#wrapper header #splash_section .container {
+#wrapper #splash_section .container h1 {
   border: 2px solid white;
-  margin: 0px;
-  padding: 0px;
-  width: 580px;
-}
-#wrapper header #splash_section .container h1 {
   color: white;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 70px;
-  margin: auto;
-  padding: 40px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0px;
+  padding: 45px;
   text-transform: uppercase;
+  width: 660px;
 }
 #wrapper #leader_in_interactive_vr {
   padding: 100px 150px;
@@ -172,53 +173,60 @@
 }
 #wrapper footer {
   background-color: black;
-  display: flex;
-  justify-content: space-between;
   padding: 80px 150px;
 }
-#wrapper footer #left_nav_section nav {
+#wrapper footer .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+}
+#wrapper footer .container #left_nav_section nav {
   margin-top: 25px;
 }
-#wrapper footer #left_nav_section nav ul {
+#wrapper footer .container #left_nav_section nav ul {
   display: flex;
   justify-content: space-between;
   padding: 0px;
   width: 500px;
 }
-#wrapper footer #left_nav_section nav ul li {
+#wrapper footer .container #left_nav_section nav ul li {
   list-style: none;
 }
-#wrapper footer #left_nav_section nav ul li a {
+#wrapper footer .container #left_nav_section nav ul li a {
   color: white;
   text-decoration: none;
 }
-#wrapper footer #right_nav_section #social_media {
+#wrapper footer .container #right_nav_section #social_media {
   display: flex;
   gap: 25px;
   justify-content: flex-end;
 }
-#wrapper footer #right_nav_section p {
+#wrapper footer .container #right_nav_section p {
   color: grey;
   font-family: 'Alata', sans-serif;
   margin-top: 25px;
 }
 @media screen and (max-width: 375px) {
   #wrapper header {
-    background-image: url(../images/mobile/image-hero.jpg);
-    padding: 35px;
+    padding: 0px;
   }
-  #wrapper header nav .container-fluid {
+  #wrapper header .container {
+    padding: 40px 35px 0px 35px;
+  }
+  #wrapper header .container nav .container-fluid {
     margin-top: 30px;
     padding: 0px;
   }
-  #wrapper header #splash_section {
-    bottom: 330px;
+  #wrapper #splash_section {
+    background-image: url(../images/mobile/image-hero.jpg);
+    bottom: 600px;
     left: 35px;
+    padding: 0px;
   }
-  #wrapper header #splash_section .container {
+  #wrapper #splash_section .container {
     width: 300px;
   }
-  #wrapper header #splash_section .container h1 {
+  #wrapper #splash_section .container h1 {
     font-size: 40px;
     padding: 10px;
     width: 100%;
@@ -332,51 +340,58 @@
     background-image: url(../images/desktop/image-fisheye.jpg);
   }
   #wrapper footer {
-    flex-direction: column;
     padding: 50px;
   }
-  #wrapper footer #left_nav_section {
+  #wrapper footer .container {
+    display: flex;
+    flex-direction: column;
+  }
+  #wrapper footer .container #left_nav_section {
     margin: auto;
   }
-  #wrapper footer #left_nav_section nav {
+  #wrapper footer .container #left_nav_section nav {
     flex-direction: column;
     text-align: center;
     width: 100%;
   }
-  #wrapper footer #left_nav_section nav ul {
+  #wrapper footer .container #left_nav_section nav ul {
     flex-direction: column;
     justify-content: center;
     width: 100%;
   }
-  #wrapper footer #left_nav_section nav ul li {
+  #wrapper footer .container #left_nav_section nav ul li {
     padding: 10px 0px;
   }
-  #wrapper footer #right_nav_section {
+  #wrapper footer .container #right_nav_section {
     margin-top: 50px;
     text-align: center;
     width: 100%;
   }
-  #wrapper footer #right_nav_section #social_media {
+  #wrapper footer .container #right_nav_section #social_media {
     justify-content: center;
   }
 }
 @media screen and (min-width: 376px) and (max-width: 600px) {
   #wrapper header {
-    background-image: url(../images/mobile/image-hero.jpg);
-    padding: 35px;
+    padding: 0px;
   }
-  #wrapper header nav .container-fluid {
+  #wrapper header .container {
+    padding: 40px 35px 0px 35px;
+  }
+  #wrapper header .container nav .container-fluid {
     margin-top: 30px;
     padding: 0px;
   }
-  #wrapper header #splash_section {
-    bottom: 330px;
+  #wrapper #splash_section {
+    padding: 0px;
+    background-image: url(../images/mobile/image-hero.jpg);
+    bottom: 600px;
     left: 35px;
   }
-  #wrapper header #splash_section .container {
+  #wrapper #splash_section .container {
     width: 300px;
   }
-  #wrapper header #splash_section .container h1 {
+  #wrapper #splash_section .container h1 {
     font-size: 40px;
     padding: 10px;
     width: 100%;
@@ -488,35 +503,38 @@
     background-image: url(../images/desktop/image-fisheye.jpg);
   }
   #wrapper footer {
-    flex-direction: column;
     padding: 50px;
   }
-  #wrapper footer #left_nav_section {
+  #wrapper footer .container {
+    display: flex;
+    flex-direction: column;
+  }
+  #wrapper footer .container #left_nav_section {
     margin: auto;
   }
-  #wrapper footer #left_nav_section nav {
+  #wrapper footer .container #left_nav_section nav {
     flex-direction: column;
     text-align: center;
     width: 100%;
   }
-  #wrapper footer #left_nav_section nav ul {
+  #wrapper footer .container #left_nav_section nav ul {
     flex-direction: column;
     justify-content: center;
     width: 100%;
   }
-  #wrapper footer #left_nav_section nav ul li {
+  #wrapper footer .container #left_nav_section nav ul li {
     padding: 10px 0px;
   }
-  #wrapper footer #right_nav_section {
+  #wrapper footer .container #right_nav_section {
     margin-top: 50px;
     text-align: center;
     width: 100%;
   }
-  #wrapper footer #right_nav_section #social_media {
+  #wrapper footer .container #right_nav_section #social_media {
     justify-content: center;
   }
 }
-@media screen and (min-width: 1200px) and (max-width: 1400px) {
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
   #wrapper #leader_in_interactive_vr .container .vr_leader {
     right: 305px;
   }
