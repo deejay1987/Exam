@@ -1,10 +1,9 @@
 * {
   margin: 0px;
   padding: 0px;
-  outline: 1px dotted red;
 }
 #wrapper header {
-  padding: 80px 150px 0px 150px;
+  padding: 80px 100px 0px 100px;
   position: fixed;
   width: 100%;
 }
@@ -50,7 +49,6 @@
 #wrapper header .container nav .container-fluid ul {
   flex-direction: row;
   gap: 30px;
-  margin-right: 100px;
   padding: 0px;
 }
 #wrapper header .container nav .container-fluid ul li {
@@ -79,7 +77,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 800px;
-  padding: 0px 150px;
+  padding: 0px 100px;
   vertical-align: top;
 }
 #wrapper #splash_section .container {
@@ -98,7 +96,7 @@
   width: 660px;
 }
 #wrapper #leader_in_interactive_vr {
-  padding: 100px 150px;
+  padding: 100px 100px;
 }
 #wrapper #leader_in_interactive_vr .container {
   background-color: white;
@@ -130,7 +128,7 @@
 #wrapper #image_section {
   display: flex;
   justify-content: center;
-  padding: 100px 150px 150px 150px;
+  padding: 100px 100px 150px 100px;
 }
 #wrapper #image_section .container {
   display: flex;
@@ -150,7 +148,7 @@
 }
 #wrapper #image_section .container button {
   border-radius: 3px;
-  border: 1px solid black;
+  border: 1px solid grey;
   height: 40px;
   margin-bottom: 50px;
   width: 150px;
@@ -177,18 +175,6 @@
   row-gap: 25px;
   width: 100%;
 }
-#wrapper #image_section .container ul li:hover {
-  position: relative;
-  opacity: .3;
-}
-#wrapper #image_section .container ul li:hover a {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-}
-#wrapper #image_section .container ul li:hover a h3 {
-  color: black;
-}
 #wrapper #image_section .container ul li {
   list-style: none;
   position: relative;
@@ -202,9 +188,6 @@
   text-decoration: none;
   text-transform: uppercase;
   width: 150px;
-}
-#wrapper #image_section .container ul li a h3 {
-  text-shadow: 0 0 3px black;
 }
 #wrapper #image_section .container ul li.earth,
 #wrapper #image_section .container ul li.night_arcade,
@@ -246,9 +229,21 @@
 #wrapper #image_section .container ul li.fisheye {
   background-image: url(../images/desktop/image-fisheye.jpg);
 }
+#wrapper #image_section .container ul li:hover::before {
+  background-color: white;
+  content: "";
+  display: flex;
+  height: 100%;
+  opacity: 60%;
+  width: 100%;
+}
+#wrapper #image_section .container ul li:hover h3 {
+  color: black;
+  font-weight: 600;
+}
 #wrapper footer {
   background-color: black;
-  padding: 80px 150px;
+  padding: 80px 100px;
 }
 #wrapper footer .container {
   display: flex;
@@ -601,7 +596,6 @@
   #wrapper #image_section .container ul li.curiosity h3,
   #wrapper #image_section .container ul li.fisheye h3 {
     font-size: 18px;
-    text-shadow: 2px 2px black;
     width: 105px;
   }
   #wrapper #image_section .container ul li.earth {

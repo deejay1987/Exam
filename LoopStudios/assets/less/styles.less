@@ -1,11 +1,10 @@
 *{
     margin: 0px;
     padding: 0px;
-    outline: 1px dotted red;
 }
 #wrapper{
     header{
-        padding: 80px 150px 0px 150px;
+        padding: 80px 100px 0px 100px;
         position: fixed;       
         width: 100%;
         .container{
@@ -47,7 +46,6 @@
                     ul{
                         flex-direction: row;
                         gap: 30px;
-                        margin-right: 100px;
                         padding: 0px;
                         li{
                             list-style: none;
@@ -82,7 +80,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         height: 800px;
-        padding: 0px 150px;
+        padding: 0px 100px;
         vertical-align: top;
         .container{
             padding: 300px 0px 0px 0px;
@@ -101,7 +99,7 @@
         }
     }
     #leader_in_interactive_vr{
-        padding: 100px 150px;
+        padding: 100px 100px;
         .container{
             background-color: white;
             display: flex;
@@ -133,7 +131,7 @@
     #image_section{
         display: flex;
         justify-content: center;
-        padding: 100px 150px 150px 150px;
+        padding: 100px 100px 150px 100px;
         .container{
             display: flex;
             flex-wrap: wrap;
@@ -151,7 +149,7 @@
             }
             button{
                 border-radius: 3px;
-                border: 1px solid black;
+                border: 1px solid grey;
                 height: 40px;
                 margin-bottom: 50px;
                 width: 150px;
@@ -177,18 +175,6 @@
                 padding: 0px;
                 row-gap: 25px;
                 width: 100%;
-                li:hover{
-                    position: relative;
-                    opacity: .3;
-                    a{
-                        transition: .5s ease;
-                        opacity: 0;
-                        position: absolute;
-                        h3{
-                            color: black;
-                        }
-                    }
-                }
                 li{
                     list-style: none;
                     position: relative;
@@ -201,9 +187,6 @@
                         text-decoration: none;
                         text-transform: uppercase;
                         width: 150px;
-                        h3{
-                            text-shadow: 0 0 3px black;
-                        }
                     }
                     &.earth, &.night_arcade, &.soccer_team, &.grid, &.from_up_above, &.borealis, &.curiosity, &.fisheye{
                         background-repeat: no-repeat;
@@ -239,12 +222,26 @@
                         background-image: url(../images/desktop/image-fisheye.jpg);
                     }
                 }
+                li:hover{
+                    &::before{
+                        background-color: white;
+                        content: "";
+                        display: flex;
+                        height: 100%;
+                        opacity: 60%;
+                        width: 100%;
+                    }
+                    h3{
+                        color: black;
+                        font-weight: 600;
+                    }
+                }
             }
         }
     }
     footer{
         background-color: black;
-        padding: 80px 150px;
+        padding: 80px 100px;
         .container{
             display: flex;
             justify-content: space-between;
@@ -584,7 +581,6 @@
                             width: 100%;
                             h3{
                                 font-size: 18px;
-                                text-shadow: 2px 2px black;
                                 width: 105px;
                             }
                         }
