@@ -1,6 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  outline: 1px dotted red;
 }
 #wrapper header {
   padding: 80px 150px 0px 150px;
@@ -8,13 +9,48 @@
   width: 100%;
 }
 #wrapper header .container {
+  position: relative;
   padding: 0px;
+}
+#wrapper header .container nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 #wrapper header .container nav .container-fluid {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 5%;
   padding: 0px;
 }
+#wrapper header .container nav .container-fluid .navbar-toggler {
+  content: "";
+  background-image: url(../images/icon-hamburger.svg);
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  transition: 0.2s ease-out;
+  position: absolute;
+  right: 10px;
+  top: 45px;
+  padding: 0px;
+}
+#wrapper header .container nav .container-fluid .burgerBtn_active {
+  content: "";
+  background-image: url(images/icon-close.svg);
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+  border: none;
+  background-color: transparent;
+}
 #wrapper header .container nav .container-fluid ul {
-  margin: 0px;
+  flex-direction: row;
+  gap: 30px;
+  margin-right: 100px;
   padding: 0px;
 }
 #wrapper header .container nav .container-fluid ul li {
@@ -23,6 +59,20 @@
 #wrapper header .container nav .container-fluid ul li a {
   color: white;
   font-family: 'Alata', sans-serif;
+  text-transform: unset;
+  font-size: 0.9rem;
+  position: relative;
+  padding-bottom: 7px;
+}
+#wrapper header .container nav .container-fluid ul li a:hover::after {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 1.5px;
+  top: 100%;
+  left: 30%;
+  background: white;
+  transition: transform 0.5s;
 }
 #wrapper #splash_section {
   background-image: url(../images/desktop/image-hero.jpg);
@@ -99,15 +149,25 @@
   width: 80%;
 }
 #wrapper #image_section .container button {
+  border-radius: 3px;
+  border: 1px solid black;
+  height: 40px;
   margin-bottom: 50px;
   width: 150px;
 }
 #wrapper #image_section .container button a {
   color: black;
-  font-size: 18px;
-  letter-spacing: .6px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
+}
+#wrapper #image_section .container button:hover {
+  background-color: black;
+}
+#wrapper #image_section .container button:hover a {
+  color: white;
 }
 #wrapper #image_section .container ul {
   display: flex;
@@ -116,6 +176,18 @@
   padding: 0px;
   row-gap: 25px;
   width: 100%;
+}
+#wrapper #image_section .container ul li:hover {
+  position: relative;
+  opacity: .3;
+}
+#wrapper #image_section .container ul li:hover a {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+}
+#wrapper #image_section .container ul li:hover a h3 {
+  color: black;
 }
 #wrapper #image_section .container ul li {
   list-style: none;
@@ -130,6 +202,9 @@
   text-decoration: none;
   text-transform: uppercase;
   width: 150px;
+}
+#wrapper #image_section .container ul li a h3 {
+  text-shadow: 0 0 3px black;
 }
 #wrapper #image_section .container ul li.earth,
 #wrapper #image_section .container ul li.night_arcade,
@@ -195,11 +270,41 @@
 #wrapper footer .container #left_nav_section nav ul li a {
   color: white;
   text-decoration: none;
+  padding-bottom: 7px;
+}
+#wrapper footer .container #left_nav_section nav ul li a:hover {
+  position: relative;
+}
+#wrapper footer .container #left_nav_section nav ul li a:hover::after {
+  background: white;
+  content: "";
+  height: 1.5px;
+  left: 20%;
+  position: absolute;
+  top: 100%;
+  transition: transform 0.5s;
+  width: 60%;
 }
 #wrapper footer .container #right_nav_section #social_media {
   display: flex;
   gap: 25px;
   justify-content: flex-end;
+}
+#wrapper footer .container #right_nav_section #social_media a img {
+  padding: 7px;
+}
+#wrapper footer .container #right_nav_section #social_media a:hover {
+  position: relative;
+}
+#wrapper footer .container #right_nav_section #social_media a:hover::after {
+  background: white;
+  content: "";
+  height: 1.5px;
+  left: 15%;
+  position: absolute;
+  top: 100%;
+  transition: transform 0.5s;
+  width: 70%;
 }
 #wrapper footer .container #right_nav_section p {
   color: grey;
@@ -208,14 +313,27 @@
 }
 @media screen and (max-width: 375px) {
   #wrapper header {
-    padding: 0px;
-  }
-  #wrapper header .container {
-    padding: 40px 35px 0px 35px;
+    padding: 0px 35px;
   }
   #wrapper header .container nav .container-fluid {
+    justify-content: space-between;
     margin-top: 30px;
     padding: 0px;
+  }
+  #wrapper header .container nav .container-fluid .navbar-toggler {
+    display: none;
+  }
+  #wrapper header .container nav .container-fluid .navbar-toggler .burgerBtn_active {
+    content: "";
+    background-image: url(images/icon-close.svg);
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background-color: transparent;
+  }
+  #wrapper header .container nav .container-fluid ul {
+    margin: 0px;
   }
   #wrapper #splash_section {
     background-image: url(../images/mobile/image-hero.jpg);
@@ -285,6 +403,9 @@
     margin: auto;
     order: 9;
     padding: 5px;
+  }
+  #wrapper #image_section .container ul {
+    row-gap: 15px;
   }
   #wrapper #image_section .container ul li a {
     bottom: 15px;
@@ -379,8 +500,12 @@
     padding: 40px 35px 0px 35px;
   }
   #wrapper header .container nav .container-fluid {
+    justify-content: space-between;
     margin-top: 30px;
     padding: 0px;
+  }
+  #wrapper header .container nav .container-fluid ul {
+    margin: 0px;
   }
   #wrapper #splash_section {
     background-image: url(../images/mobile/image-hero.jpg);
@@ -449,6 +574,9 @@
     order: 9;
     padding: 5px;
   }
+  #wrapper #image_section .container ul {
+    row-gap: 15px;
+  }
   #wrapper #image_section .container ul li a {
     bottom: 15px;
   }
@@ -473,6 +601,7 @@
   #wrapper #image_section .container ul li.curiosity h3,
   #wrapper #image_section .container ul li.fisheye h3 {
     font-size: 18px;
+    text-shadow: 2px 2px black;
     width: 105px;
   }
   #wrapper #image_section .container ul li.earth {
