@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    outline: 1px dotted red;
 }
 #wrapper{
     header{
@@ -25,28 +26,17 @@
                         content: "";
                         background-image: url(../images/icon-hamburger.svg);
                         background-repeat: no-repeat;
-                        width: 35px;
-                        height: 35px;
+                        width: 27px;
+                        height: 18px;
                         background-color: transparent;
                         transition: 0.2s ease-out;
-                        position: absolute;
-                        right: 10px;
-                        top: 45px;
                         padding: 0px;
                     }
-                    .burgerBtn_active {
-                        content: "";
-                        background-image: url(./images/icon-close.svg);
-                        background-repeat: no-repeat;
-                        width: 35px;
-                        height: 35px;
-                        border: none;
-                        background-color: transparent;
-                      }
                     ul{
                         flex-direction: row;
                         gap: 30px;
                         padding: 0px;
+                        margin: 0px;
                         li{
                             list-style: none;
                             a{
@@ -321,20 +311,15 @@
                         justify-content: space-between;
                         margin-top: 30px;
                         padding: 0px;
-                        .navbar-toggler{
-                            display: none;
-                            .burgerBtn_active {
-                                content: "";
-                                background-image: url(./images/icon-close.svg);
-                                background-repeat: no-repeat;
-                                width: 35px;
-                                height: 35px;
-                                border: none;
-                                background-color: transparent;
-                            }
-                        }
                         ul{
                             margin: 0px;
+                            li{
+                                a:hover{
+                                    &::after{
+                                        display: none;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -356,15 +341,14 @@
         }
         #leader_in_interactive_vr{
             display: flex;
-            padding: 35px;
+            padding: 70px 35px;
             .container{
                 display: flex;
                 flex-direction: column;
                 text-align: center;
                 img{
-                    margin-top: 50px;
-                    width: 100%
-                };
+                    width: 100%;
+                }
                 .vr_leader{
                    bottom: 0px;
                    height: auto;
@@ -412,6 +396,7 @@
                     li{
                         a{
                             bottom: 15px;
+                            width: 105px;
                         }
                         &.earth, &.night_arcade, &.soccer_team, &.grid, &.from_up_above, &.borealis, &.curiosity, &.fisheye{
                             height: 112px;
@@ -419,7 +404,7 @@
                             width: 100%;
                             h3{
                                 font-size: 18px;
-                                width: 105px;
+                                margin-bottom: 0px;
                             }
                         }
                         &.earth{
@@ -433,8 +418,8 @@
                         }
                         &.grid{
                             background-image: url(../images/mobile/image-grid.jpg);
-                            h3{
-                                width: 100px;
+                            a{   
+                                width: 80px;
                             }
                         }
                         &.from_up_above{
@@ -447,14 +432,14 @@
                             background-image: url(../images/mobile/image-curiosity.jpg);
                         }
                         &.fisheye{
-                            background-image: url(../images/desktop/image-fisheye.jpg);
+                            background-image: url(../images/mobile/image-fisheye.jpg);
                         }
                     }
                 }
             }
         }
         footer{
-            padding: 50px;
+            padding: 35px;
             .container{
                 display: flex;
                 flex-direction: column;
@@ -499,6 +484,13 @@
                         padding: 0px;
                         ul{
                             margin: 0px;
+                            li{
+                                a:hover{
+                                    &::after{
+                                        display: none;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -520,14 +512,13 @@
         }
         #leader_in_interactive_vr{
             display: flex;
-            padding: 35px;
+            padding: 70px 35px;
             .container{
                 display: block;
                 text-align: center;
                 img{
-                    margin-top: 50px;
-                    width: 100%
-                };
+                    width: 100%;
+                }
                 .vr_leader{
                     bottom: 0px;
                     height: auto;
@@ -574,6 +565,7 @@
                     li{
                         a{
                             bottom: 15px;
+                            width: 105px;
                         }
                         &.earth, &.night_arcade, &.soccer_team, &.grid, &.from_up_above, &.borealis, &.curiosity, &.fisheye{
                             height: 112px;
@@ -581,7 +573,7 @@
                             width: 100%;
                             h3{
                                 font-size: 18px;
-                                width: 105px;
+                                margin-bottom: 0px;
                             }
                         }
                         &.earth{
@@ -596,7 +588,7 @@
                         &.grid{
                             background-image: url(../images/mobile/image-grid.jpg);
                             h3{
-                                width: 100px;
+                                width: 70px;
                             }
                         }
                         &.from_up_above{
@@ -616,7 +608,7 @@
             }
         }
         footer{
-            padding: 50px;
+            padding: 35px;
             .container{
                 display: flex;
                 flex-direction: column;
@@ -653,7 +645,7 @@
         #leader_in_interactive_vr{
             .container{
                 .vr_leader{
-                    right: 305px;
+                    right: 210px;
                 }
             }
         }

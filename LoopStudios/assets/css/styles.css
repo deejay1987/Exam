@@ -1,6 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  outline: 1px dotted red;
 }
 #wrapper header {
   padding: 80px 100px 0px 100px;
@@ -28,28 +29,17 @@
   content: "";
   background-image: url(../images/icon-hamburger.svg);
   background-repeat: no-repeat;
-  width: 35px;
-  height: 35px;
+  width: 27px;
+  height: 18px;
   background-color: transparent;
   transition: 0.2s ease-out;
-  position: absolute;
-  right: 10px;
-  top: 45px;
   padding: 0px;
-}
-#wrapper header .container nav .container-fluid .burgerBtn_active {
-  content: "";
-  background-image: url(images/icon-close.svg);
-  background-repeat: no-repeat;
-  width: 35px;
-  height: 35px;
-  border: none;
-  background-color: transparent;
 }
 #wrapper header .container nav .container-fluid ul {
   flex-direction: row;
   gap: 30px;
   padding: 0px;
+  margin: 0px;
 }
 #wrapper header .container nav .container-fluid ul li {
   list-style: none;
@@ -315,20 +305,11 @@
     margin-top: 30px;
     padding: 0px;
   }
-  #wrapper header .container nav .container-fluid .navbar-toggler {
-    display: none;
-  }
-  #wrapper header .container nav .container-fluid .navbar-toggler .burgerBtn_active {
-    content: "";
-    background-image: url(images/icon-close.svg);
-    background-repeat: no-repeat;
-    width: 35px;
-    height: 35px;
-    border: none;
-    background-color: transparent;
-  }
   #wrapper header .container nav .container-fluid ul {
     margin: 0px;
+  }
+  #wrapper header .container nav .container-fluid ul li a:hover::after {
+    display: none;
   }
   #wrapper #splash_section {
     background-image: url(../images/mobile/image-hero.jpg);
@@ -346,7 +327,7 @@
   }
   #wrapper #leader_in_interactive_vr {
     display: flex;
-    padding: 35px;
+    padding: 70px 35px;
   }
   #wrapper #leader_in_interactive_vr .container {
     display: flex;
@@ -354,7 +335,6 @@
     text-align: center;
   }
   #wrapper #leader_in_interactive_vr .container img {
-    margin-top: 50px;
     width: 100%;
   }
   #wrapper #leader_in_interactive_vr .container .vr_leader {
@@ -404,6 +384,7 @@
   }
   #wrapper #image_section .container ul li a {
     bottom: 15px;
+    width: 105px;
   }
   #wrapper #image_section .container ul li.earth,
   #wrapper #image_section .container ul li.night_arcade,
@@ -426,7 +407,7 @@
   #wrapper #image_section .container ul li.curiosity h3,
   #wrapper #image_section .container ul li.fisheye h3 {
     font-size: 18px;
-    width: 105px;
+    margin-bottom: 0px;
   }
   #wrapper #image_section .container ul li.earth {
     background-image: url(../images/mobile/image-deep-earth.jpg);
@@ -440,8 +421,8 @@
   #wrapper #image_section .container ul li.grid {
     background-image: url(../images/mobile/image-grid.jpg);
   }
-  #wrapper #image_section .container ul li.grid h3 {
-    width: 100px;
+  #wrapper #image_section .container ul li.grid a {
+    width: 80px;
   }
   #wrapper #image_section .container ul li.from_up_above {
     background-image: url(../images/mobile/image-from-above.jpg);
@@ -453,10 +434,10 @@
     background-image: url(../images/mobile/image-curiosity.jpg);
   }
   #wrapper #image_section .container ul li.fisheye {
-    background-image: url(../images/desktop/image-fisheye.jpg);
+    background-image: url(../images/mobile/image-fisheye.jpg);
   }
   #wrapper footer {
-    padding: 50px;
+    padding: 35px;
   }
   #wrapper footer .container {
     display: flex;
@@ -502,6 +483,9 @@
   #wrapper header .container nav .container-fluid ul {
     margin: 0px;
   }
+  #wrapper header .container nav .container-fluid ul li a:hover::after {
+    display: none;
+  }
   #wrapper #splash_section {
     background-image: url(../images/mobile/image-hero.jpg);
     bottom: 600px;
@@ -518,14 +502,13 @@
   }
   #wrapper #leader_in_interactive_vr {
     display: flex;
-    padding: 35px;
+    padding: 70px 35px;
   }
   #wrapper #leader_in_interactive_vr .container {
     display: block;
     text-align: center;
   }
   #wrapper #leader_in_interactive_vr .container img {
-    margin-top: 50px;
     width: 100%;
   }
   #wrapper #leader_in_interactive_vr .container .vr_leader {
@@ -574,6 +557,7 @@
   }
   #wrapper #image_section .container ul li a {
     bottom: 15px;
+    width: 105px;
   }
   #wrapper #image_section .container ul li.earth,
   #wrapper #image_section .container ul li.night_arcade,
@@ -596,7 +580,7 @@
   #wrapper #image_section .container ul li.curiosity h3,
   #wrapper #image_section .container ul li.fisheye h3 {
     font-size: 18px;
-    width: 105px;
+    margin-bottom: 0px;
   }
   #wrapper #image_section .container ul li.earth {
     background-image: url(../images/mobile/image-deep-earth.jpg);
@@ -611,7 +595,7 @@
     background-image: url(../images/mobile/image-grid.jpg);
   }
   #wrapper #image_section .container ul li.grid h3 {
-    width: 100px;
+    width: 70px;
   }
   #wrapper #image_section .container ul li.from_up_above {
     background-image: url(../images/mobile/image-from-above.jpg);
@@ -626,7 +610,7 @@
     background-image: url(../images/desktop/image-fisheye.jpg);
   }
   #wrapper footer {
-    padding: 50px;
+    padding: 35px;
   }
   #wrapper footer .container {
     display: flex;
@@ -659,6 +643,6 @@
 }
 @media screen and (min-width: 1200px) and (max-width: 1439px) {
   #wrapper #leader_in_interactive_vr .container .vr_leader {
-    right: 305px;
+    right: 210px;
   }
 }
